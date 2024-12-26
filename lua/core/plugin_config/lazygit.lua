@@ -10,3 +10,6 @@ vim.g.lazygit_config_file_path = '' -- custom config file path
 vim.g.lazygit_config_file_path = {} -- table of custom config file paths
 
 vim.g.lazygit_on_exit_callback = nil -- optional function callback when exiting lazygit (useful for example to refresh some UI elements after lazy git has made some changes)
+
+-- set keybinding for lazygit
+vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', {noremap = true, silent = true})

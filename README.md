@@ -12,8 +12,11 @@ I have been using the following plugins:
 - Lualine
 - Toggleterm
 - Treesitter
-- Gruvbox (GUI Theme)
+- Gruvbox (Terminal Theme)
+- Onedark (Terminal Theme)
 - Githup Copilot
+- Lazygit
+- Dashboard
 
 I have also been using some custom keybindings that I have been using for a while now. Please refer to the keybindings section for more information.
 
