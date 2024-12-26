@@ -1,3 +1,4 @@
+vim.opt.termguicolors = true
 require("bufferline").setup {
   options = {
     numbers = "none",
@@ -8,7 +9,7 @@ require("bufferline").setup {
     left_mouse_command = "buffer %d",
     middle_mouse_command = nil,
     indicator_icon = "▎",
-    buffer_close_icon = "",
+    buffer_close_icon = "",
     modified_icon = "●",
     close_icon = "",
     left_trunc_marker = "",
@@ -27,7 +28,7 @@ require("bufferline").setup {
     show_close_icon = true,
     show_tab_indicators = true,
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-    separator_style = "thin",
+    separator_style = "slant",
     enforce_regular_tabs = false,
     always_show_bufferline = true,
     sort_by = "extension",
