@@ -14,6 +14,8 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'ellisonleao/gruvbox.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
   use 'navarasu/onedark.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
@@ -24,8 +26,45 @@ return require('packer').startup(function(use)
   event = 'VimEnter',
   config = function()
     require('dashboard').setup {
-      -- config
-    }
+    theme = 'hyper',
+    config = {
+      week_header = {
+       enable = false,
+      },
+      shortcut = {
+        { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'u' },
+        {
+          icon = ' ',
+          icon_hl = '@variable',
+          desc = 'Find File',
+          group = 'Label',
+          action = 'Telescope find_files',
+          key = 'o',
+        },
+        {
+          desc = '󰷈 New File',
+          group = 'DiagnosticHint',
+          action = 'enew',
+          key = 'n',
+        },
+        {
+          desc = '󰝰 Recent Files',
+          group = 'Number',
+          action = 'Telescope oldfiles',
+          key = 'r',
+        },
+        {
+          desc = ' Bookmarks',
+          group = 'Number',
+          action = 'Telescope marks',
+          key = 'm',
+        },
+      },
+      project = { 
+        enable = false,
+      },
+    },
+  }
   end,
   requires = {'nvim-tree/nvim-web-devicons'}
 }
@@ -62,6 +101,12 @@ return require('packer').startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
 end}
+use {
+    'nvim-telescope/telescope-project.nvim',
+    requires = {
+        'nvim-telescope/telescope.nvim',
+    },
+}
   use "github/copilot.vim"
   -- My plugins here
   -- use 'foo1/bar1.nvim'
