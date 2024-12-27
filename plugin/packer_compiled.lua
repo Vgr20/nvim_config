@@ -91,7 +91,7 @@ _G.packer_plugins = {
     url = "https://github.com/github/copilot.vim"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\4\0\0\6\0\16\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\6\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\4=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\fproject\1\0\1\venable\1\rshortcut\1\0\4\bkey\6m\ngroup\vNumber\vaction\20Telescope marks\tdesc\18 Bookmarks\1\0\4\bkey\6r\ngroup\vNumber\vaction\23Telescope oldfiles\tdesc\22󰝰 Recent Files\1\0\4\bkey\6n\ngroup\19DiagnosticHint\vaction\tenew\tdesc\18󰷈 New File\1\0\6\bkey\6o\ngroup\nLabel\vaction\25Telescope find_files\tdesc\14Find File\ficon_hl\14@variable\ticon\t \1\0\4\bkey\6u\ngroup\14@property\vaction\15PackerSync\tdesc\16󰊳 Update\16week_header\1\0\3\fproject\0\rshortcut\0\16week_header\0\1\0\1\venable\1\1\0\2\vconfig\0\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\4\0\0\6\0\16\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\6\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\4=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\fproject\1\0\1\venable\1\rshortcut\1\0\4\bkey\6m\ngroup\vNumber\vaction\20Telescope marks\tdesc\18 Bookmarks\1\0\4\bkey\6r\ngroup\vNumber\vaction\23Telescope oldfiles\tdesc\22󰝰 Recent Files\1\0\4\bkey\6n\ngroup\19DiagnosticHint\vaction\tenew\tdesc\18󰷈 New File\1\0\6\bkey\6o\ngroup\nLabel\vaction\27Telescope file_browser\tdesc\14Find File\ficon_hl\14@variable\ticon\t \1\0\4\bkey\6u\ngroup\14@property\vaction\15PackerSync\tdesc\16󰊳 Update\16week_header\1\0\3\fproject\0\rshortcut\0\16week_header\0\1\0\1\venable\1\1\0\2\vconfig\0\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope-project.nvim"] = {
     loaded = true,
     path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/telescope-project.nvim",
@@ -203,10 +208,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
 -- Config for: lazygit.nvim
 time([[Config for lazygit.nvim]], true)
 try_loadstring("\27LJ\2\nL\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\flazygit\19load_extension\14telescope\frequire\0", "config", "lazygit.nvim")
@@ -215,6 +216,10 @@ time([[Config for lazygit.nvim]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

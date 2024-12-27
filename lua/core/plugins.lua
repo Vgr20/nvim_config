@@ -22,6 +22,10 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   use {
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+}
+  use {
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',
   config = function()
@@ -38,7 +42,7 @@ return require('packer').startup(function(use)
           icon_hl = '@variable',
           desc = 'Find File',
           group = 'Label',
-          action = 'Telescope find_files',
+          action = 'Telescope file_browser',
           key = 'o',
         },
         {
