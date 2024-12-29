@@ -91,7 +91,7 @@ _G.packer_plugins = {
     url = "https://github.com/github/copilot.vim"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\4\0\0\6\0\16\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\6\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\4=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\fproject\1\0\1\venable\1\rshortcut\1\0\4\bkey\6m\ngroup\vNumber\vaction\20Telescope marks\tdesc\18 Bookmarks\1\0\4\bkey\6r\ngroup\vNumber\vaction\23Telescope oldfiles\tdesc\22󰝰 Recent Files\1\0\4\bkey\6n\ngroup\19DiagnosticHint\vaction\tenew\tdesc\18󰷈 New File\1\0\6\bkey\6o\ngroup\nLabel\vaction\27Telescope file_browser\tdesc\14Find File\ficon_hl\14@variable\ticon\t \1\0\4\bkey\6u\ngroup\14@property\vaction\15PackerSync\tdesc\16󰊳 Update\16week_header\1\0\3\fproject\0\rshortcut\0\16week_header\0\1\0\1\venable\1\1\0\2\vconfig\0\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\4\0\0\6\0\16\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\6\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\4=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\fproject\1\0\1\venable\1\rshortcut\1\0\4\ngroup\vNumber\tdesc\18 Bookmarks\bkey\6m\vaction\20Telescope marks\1\0\4\ngroup\vNumber\tdesc\22󰝰 Recent Files\bkey\6r\vaction\23Telescope oldfiles\1\0\4\ngroup\19DiagnosticHint\tdesc\18󰷈 New File\bkey\6n\vaction\tenew\1\0\6\tdesc\14Find File\ngroup\nLabel\bkey\6o\vaction\27Telescope file_browser\ficon_hl\14@variable\ticon\t \1\0\4\ngroup\14@property\tdesc\16󰊳 Update\bkey\6u\vaction\15PackerSync\16week_header\1\0\3\16week_header\0\fproject\0\rshortcut\0\1\0\1\venable\1\1\0\2\ntheme\nhyper\vconfig\0\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -133,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/noice.nvim",
     url = "https://github.com/folke/noice.nvim"
+  },
+  ["nordic.nvim"] = {
+    loaded = true,
+    path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/AlexvZyl/nordic.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
