@@ -29,6 +29,12 @@ return require('packer').startup(function(use)
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 }
+  use { "braxtons12/blame_line.nvim",
+    config = function()
+        require("blame_line").setup()
+    end
+  }
+
   use {
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',
