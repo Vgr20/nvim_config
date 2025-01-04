@@ -23,6 +23,13 @@ return require('packer').startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
+  use {
+  'lewis6991/gitsigns.nvim',
+  requires = { 'nvim-lua/plenary.nvim' },
+  config = function()
+    require('gitsigns').setup()
+  end
+}
   use 'nvim-lualine/lualine.nvim'
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   use {
