@@ -1,5 +1,7 @@
 require('gen').setup({
-
+  display_mode = 'split',
+  show_prompt = true,
+  show_model = true,
 })
 
 vim.keymap.set({ 'n', 'v' }, '<leader>a', ':Gen Ask<CR>')
