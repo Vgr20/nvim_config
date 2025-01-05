@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'ellisonleao/gruvbox.nvim'
   use "rebelot/kanagawa.nvim"
+  use 'David-Kunz/gen.nvim'
   use 'AlexvZyl/nordic.nvim'
   use 'Mofiqul/vscode.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
