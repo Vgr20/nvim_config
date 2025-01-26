@@ -27,6 +27,19 @@ return require('packer').startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {
+  'hrsh7th/nvim-cmp',
+  requires = {
+    { 'hrsh7th/cmp-nvim-lsp' },  -- LSP source for nvim-cmp
+    { 'hrsh7th/cmp-buffer' },    -- Buffer completions
+    { 'hrsh7th/cmp-path' },      -- Path completions
+    { 'hrsh7th/cmp-cmdline' },   -- Command-line completions
+    { 'L3MON4D3/LuaSnip' },      -- Snippet engine
+    { 'saadparwaiz1/cmp_luasnip' } -- Snippet completions
+  }
+}
+
   use {
   'lewis6991/gitsigns.nvim',
   requires = { 'nvim-lua/plenary.nvim' },
