@@ -21,7 +21,7 @@ require("bufferline").setup {
     end,
     max_name_length = 18,
     max_prefix_length = 15, -- prefix used when a buffer is deduplicated
-    tab_size = 18,
+    tab_size = 20,
     offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "center"}},
     show_buffer_icons = true, -- disable filetype icons for buffers
     show_buffer_close_icons = true,
@@ -32,6 +32,11 @@ require("bufferline").setup {
     enforce_regular_tabs = false,
     always_show_bufferline = true,
     sort_by = "extension",
+    diagnostics = "nvim_lsp",
+    diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      local icon = level:match("error") and " " or " "
+      return " " .. icon .. count
+    end,
   }
 }
 
