@@ -1,9 +1,10 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls" , "pyright",  "ruff" },
+  ensure_installed = { "lua_ls" , "pyright",  "ruff"},
 
 })
 
+-- TODO: Add a keymap for the telescope command
 local on_attach = function(_, _)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})

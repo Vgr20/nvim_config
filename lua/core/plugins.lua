@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
   use 'karb94/neoscroll.nvim'
   use "rebelot/kanagawa.nvim"
   use 'sunjon/shade.nvim'
+  use 'catppuccin/nvim'
   use 'folke/twilight.nvim'
   use 'David-Kunz/gen.nvim'
   use 'AlexvZyl/nordic.nvim'
@@ -25,6 +26,7 @@ return require('packer').startup(function(use)
   use 'MunifTanjim/prettier.nvim'
   use 'navarasu/onedark.nvim'
   use "lukas-reineke/indent-blankline.nvim"
+  use 'nvim-lua/plenary.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use {'hrsh7th/cmp-nvim-lsp'}
@@ -116,6 +118,10 @@ return require('packer').startup(function(use)
   use {"folke/noice.nvim", 
     requires = {{'MunifTanjim/nui.nvim' , 'rcarriga/nvim-notify'}}
     }
+  use {"folke/todo-comments.nvim", 
+    requires = "nvim-lua/plenary.nvim",
+    opts = {},
+  }
   use {
     "nvim-telescope/telescope.nvim",
     tag = '0.1.4',

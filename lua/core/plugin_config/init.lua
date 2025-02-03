@@ -23,3 +23,5 @@ require("core.plugin_config.neoscroll")
 require("core.plugin_config.shader")
 require("core.plugin_config.twilight")
 require("core.plugin_config.nvim-cmp")
+require("core.plugin_config.todo-comments")
+--TODO add more plugins

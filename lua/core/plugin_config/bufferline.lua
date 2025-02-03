@@ -4,7 +4,7 @@ require("bufferline").setup {
     numbers = "none",
     number_style = "superscript",
     mappings = true,
-    close_command = "bdelete! %d",
+    close_command = "bdelete! %d | bnext",
     right_mouse_command = "bdelete! %d",
     left_mouse_command = "buffer %d",
     middle_mouse_command = nil,
@@ -31,7 +31,7 @@ require("bufferline").setup {
     separator_style = "slant",
     enforce_regular_tabs = false,
     always_show_bufferline = true,
-    sort_by = "extension",
+    sort_by = "instert_at_end",
     diagnostics = "nvim_lsp",
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
       local icon = level:match("error") and " " or " "
@@ -55,6 +55,6 @@ vim.api.nvim_set_keymap('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>', { noremap =
 vim.api.nvim_set_keymap('n', '<A-9>', ':BufferLineGoToBuffer 9<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-b>', ':BufferLinePick<CR>', { noremap = true, silent = true })
 -- close current buffer
-vim.api.nvim_set_keymap('n', '<A-m>', ':bdelete | bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-m>', ':bdelete! | bnext<CR>', { noremap = true, silent = true })
 
 

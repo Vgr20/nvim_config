@@ -1,5 +1,5 @@
 require('gen').setup({
-  display_mode = 'split',
+  display_mode = 'float',
   show_prompt = true,
   show_model = true,
 })

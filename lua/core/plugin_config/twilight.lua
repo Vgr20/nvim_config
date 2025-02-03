@@ -17,7 +17,7 @@ local config = {
 }
 
 -- set Keymap for Twilight in nvum
-vim.api.nvim_set_keymap('n', '<leader>t', ':TwilightEnable<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>t', ':Twilight<CR>', { noremap = true, silent = true })
 
 return config
 

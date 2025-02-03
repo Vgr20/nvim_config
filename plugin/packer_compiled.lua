@@ -127,7 +127,7 @@ _G.packer_plugins = {
     url = "https://github.com/github/copilot.vim"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\4\0\0\6\0\16\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\6\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\4=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\fproject\1\0\1\venable\1\rshortcut\1\0\4\vaction\20Telescope marks\ngroup\vNumber\bkey\6m\tdesc\18 Bookmarks\1\0\4\vaction\23Telescope oldfiles\ngroup\vNumber\bkey\6r\tdesc\22󰝰 Recent Files\1\0\4\vaction\tenew\ngroup\19DiagnosticHint\bkey\6n\tdesc\18󰷈 New File\1\0\6\tdesc\14Find File\ficon_hl\14@variable\bkey\6o\ticon\t \ngroup\nLabel\vaction\27Telescope file_browser\1\0\4\vaction\15PackerSync\ngroup\14@property\bkey\6u\tdesc\16󰊳 Update\16week_header\1\0\3\16week_header\0\fproject\0\rshortcut\0\1\0\1\venable\1\1\0\2\ntheme\nhyper\vconfig\0\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\4\0\0\6\0\16\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\6\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\4=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\fproject\1\0\1\venable\1\rshortcut\1\0\4\tdesc\18 Bookmarks\vaction\20Telescope marks\ngroup\vNumber\bkey\6m\1\0\4\tdesc\22󰝰 Recent Files\vaction\23Telescope oldfiles\ngroup\vNumber\bkey\6r\1\0\4\tdesc\18󰷈 New File\vaction\tenew\ngroup\19DiagnosticHint\bkey\6n\1\0\6\ficon_hl\14@variable\vaction\27Telescope file_browser\ticon\t \bkey\6o\tdesc\14Find File\ngroup\nLabel\1\0\4\tdesc\16󰊳 Update\vaction\15PackerSync\ngroup\14@property\bkey\6u\16week_header\1\0\3\fproject\0\rshortcut\0\16week_header\0\1\0\1\venable\1\1\0\2\vconfig\0\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -206,6 +206,11 @@ _G.packer_plugins = {
     path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
+  nvim = {
+    loaded = true,
+    path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -276,6 +281,11 @@ _G.packer_plugins = {
     path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/vishagar/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["toggleterm.nvim"] = {
     config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
     loaded = true,
@@ -295,6 +305,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: lazygit.nvim
+time([[Config for lazygit.nvim]], true)
+try_loadstring("\27LJ\2\nL\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\flazygit\19load_extension\14telescope\frequire\0", "config", "lazygit.nvim")
+time([[Config for lazygit.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
@@ -307,10 +321,6 @@ time([[Config for blame_line.nvim]], false)
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
--- Config for: lazygit.nvim
-time([[Config for lazygit.nvim]], true)
-try_loadstring("\27LJ\2\nL\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\flazygit\19load_extension\14telescope\frequire\0", "config", "lazygit.nvim")
-time([[Config for lazygit.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")

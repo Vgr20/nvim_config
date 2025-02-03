@@ -1,5 +1,4 @@
 require("blame_line").setup {
- 			-- whether the blame line should be shown in visual modes
  			show_in_visual = true,
 
  			-- whether the blame line should be shown in insert mode
