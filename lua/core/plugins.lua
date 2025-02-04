@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
   use 'catppuccin/nvim'
   use 'folke/twilight.nvim'
   use 'David-Kunz/gen.nvim'
+  use {"ellisonleao/carbon-now.nvim", config = function() require('carbon-now').setup() end}
   use 'AlexvZyl/nordic.nvim'
   use 'Mofiqul/vscode.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
